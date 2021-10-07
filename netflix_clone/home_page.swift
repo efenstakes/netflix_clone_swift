@@ -17,7 +17,7 @@ struct HomePage: View {
     var body: some View {
         ZStack(alignment: .leading) {
             
-            Color.black.opacity(0.7).ignoresSafeArea(.all)
+            Color.black.opacity(0.9).ignoresSafeArea(.all)
             
             
             ScrollView {
@@ -49,12 +49,39 @@ struct HomePage: View {
                 
                 
                 // trending
+                SectionTitle(title: "Trending in Tanzania")
                 ScrollView(.horizontal, showsIndicators: false) {
                     HStack {
                         ForEach(filmsViewModel.films) { film in
                             TrendingFildCard(
                                 film: film,
                                 number: 1
+                            )
+                        }
+                    }
+                }
+                   
+                // top picks for you
+                SectionTitle(title: "Top Picks For You")
+                ScrollView(.horizontal, showsIndicators: false) {
+                    HStack(alignment: .center, spacing: 8) {
+                        ForEach(filmsViewModel.films) { film in
+                            FilmCard(
+                                film: film,
+                                isLarge: true
+                            )
+                        }
+                    }
+                }
+                
+                // Recommended For You
+                SectionTitle(title: "Recommended For You")
+                ScrollView(.horizontal, showsIndicators: false) {
+                    HStack(alignment: .center, spacing: 8) {
+                        ForEach(filmsViewModel.films) { film in
+                            FilmCard(
+                                film: film,
+                                isLarge: false
                             )
                         }
                     }
