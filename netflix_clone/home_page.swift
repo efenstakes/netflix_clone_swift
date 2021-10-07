@@ -48,6 +48,18 @@ struct HomePage: View {
                 )
                 
                 
+                // trending
+                ScrollView(.horizontal, showsIndicators: false) {
+                    HStack {
+                        ForEach(filmsViewModel.films) { film in
+                            TrendingFildCard(
+                                film: film,
+                                number: 1
+                            )
+                        }
+                    }
+                }
+                
             }
             
         }
