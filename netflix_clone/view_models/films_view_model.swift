@@ -6,3 +6,15 @@
 //
 
 import Foundation
+
+
+
+class FilmsViewModel: ObservableObject {
+    @Published var films = [Film]()
+    
+    
+    init() {
+        self.films = filmsData
+    }
+    
+}
