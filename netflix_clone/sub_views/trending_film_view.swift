@@ -60,7 +60,7 @@ struct TrendingFildCard: View {
                 
                 
                 Text("\(number)")
-                    .font(.system(size: 108))
+                    .font(.system(size: 108).italic())
                     .fontWeight(.heavy)
                     .foregroundColor(.white.opacity(0.5))
                     .offset(x: -20, y: 20)

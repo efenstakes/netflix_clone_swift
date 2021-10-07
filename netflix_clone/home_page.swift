@@ -28,6 +28,7 @@ struct HomePage: View {
                     Text("NetFlix")
                         .foregroundColor(.red)
                         .font(.title2)
+                        .italic()
                         .fontWeight(.heavy)
                     
                     Spacer()
