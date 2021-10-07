@@ -18,7 +18,7 @@ struct TrendingFildCard: View {
             
             Image(film.image)
                 .resizable()
-                .cornerRadius(10)
+                .cornerRadius(4)
                 .frame(width: 160, height: 220, alignment: .center)
             
             LinearGradient(
@@ -33,7 +33,7 @@ struct TrendingFildCard: View {
                 startPoint: .top,
                 endPoint: .bottom
             )
-            .cornerRadius(10)
+            .cornerRadius(4)
             
             // name
             VStack(alignment: .center) {
